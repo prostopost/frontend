@@ -1,0 +1,17 @@
+{
+  "name": "verstka",
+  "description": "Pack for converting to html&css",
+  "main": "index.js",
+  "authors": [
+    "daniiltserin"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
