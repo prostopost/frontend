@@ -9,8 +9,6 @@
   "author": "daniiltserin",
   "license": "MIT",
   "devDependencies": {
-    "babel-polyfill": "^6.20.0",
-    "babelify": "^7.3.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-data": "^1.2.1",
@@ -20,16 +18,18 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-watch": "^4.3.11",
-    "haml": "^0.4.3",
     "jasmine": "^2.5.2",
     "mocha": "^3.2.0",
     "postcss": "^5.2.8"
   },
   "dependencies": {
     "autoprefixer": "^6.6.0",
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.18.5",
+    "font-awesome": "^4.7.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-pug": "^3.2.0",
+    "jquery": "^3.1.1",
     "pug": "^2.0.0-beta6"
   }
 }

@@ -1,0 +1,332 @@
+.banner
+  h1
+    | DANIIL
+  .container
+    .banner-left
+      h3 the easiest way to find your dream home
+      p Excepteur sint occaecat cupidatat.
+    .banner-right
+      h3
+        span Search For Home
+      .reservation
+        .section_room
+          span.glyphicon.glyphicon-map-marker(aria-hidden='true')
+          |  
+          select#country.frm-field.required(onchange='change_country(this.value)')
+            option(value='null') Location
+            option(value='null') Denmark
+            option(value='AX') Sweden
+            option(value='AX') New Zealand
+            option(value='AX') America
+            option(value='AX') Australia
+        .section_room
+          span.glyphicon.glyphicon-home(aria-hidden='true')
+          |  
+          select#country1.frm-field.required(onchange='change_country(this.value)')
+            option(value='null') Type of property
+            option(value='null') Property1
+            option(value='AX') Property2
+            option(value='AX') Property3
+            option(value='AX') Property4
+            option(value='AX') Property5
+        .reservation-grids
+          .reservation-grid-left
+            .section_room
+              span.tent
+              |  
+              select#country2.frm-field.required(onchange='change_country(this.value)')
+                option(value='null') Bedrooms
+                option(value='null') 1
+                option(value='AX') 2
+                option(value='AX') 3
+                option(value='AX') 4
+                option(value='AX') More
+          .reservation-grid-right
+            .section_room
+              span.bath
+              |  
+              select#country3.frm-field.required(onchange='change_country(this.value)')
+                option(value='null') Baths
+                option(value='null') Any
+                option(value='AX') 2
+                option(value='AX') 3
+                option(value='AX') 4
+                option(value='AX') More
+          .clearfix
+        .reservation-grids
+          .reservation-grid-left
+            .section_room
+              span.glyphicon.glyphicon-yen(aria-hidden='true')
+              |  
+              select#country2.frm-field.required(onchange='change_country(this.value)')
+                option(value='null') Price From Min
+                option(value='null') No Minimum
+                option(value='AX') 1000Yen
+                option(value='AX') 3000Yen
+                option(value='AX') 4000Yen
+                option(value='AX') 5000Yen
+          .reservation-grid-right
+            .section_room
+              span.glyphicon.glyphicon-yen(aria-hidden='true')
+              |  
+              select#country3.frm-field.required(onchange='change_country(this.value)')
+                option(value='null') Price From Max
+                option(value='null') Any
+                option(value='AX') 15000Yen
+                option(value='AX') 25000Yen
+                option(value='AX') 35000Yen
+                option(value='AX') More
+          .clearfix
+        .keywords
+          form(action='#', method='post')
+            span.glyphicon.glyphicon-list-alt(aria-hidden='true')
+            |  
+            input(type='text', name='Key Words', placeholder='Key Words', required=' ')
+            |  
+            input(type='submit', value='Search')
+    .clearfix
+.about
+  .container
+    h3
+      span About Us
+    p.autem Who we are
+    .about-grids
+      p.delectus
+        | Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      .col-md-3.about-grid
+        figure
+          img.img-responsive(src='images/1.jpg', alt=' ')
+          figcaption
+            h4 James Willy
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+            ul.social-icons
+              li
+                a.icon.icon-border.facebook(href='#')
+              li
+                a.icon.icon-border.twitter(href='#')
+              li
+                a.icon.icon-border.instagram(href='#')
+      .col-md-3.about-grid
+        figure
+          img.img-responsive(src='images/2.jpg', alt=' ')
+          figcaption
+            h4 Chris Michael
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+            ul.social-icons
+              li
+                a.icon.icon-border.facebook(href='#')
+              li
+                a.icon.icon-border.twitter(href='#')
+              li
+                a.icon.icon-border.instagram(href='#')
+      .col-md-3.about-grid
+        figure
+          img.img-responsive(src='images/3.jpg', alt=' ')
+          figcaption
+            h4 Laura Li
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+            ul.social-icons
+              li
+                a.icon.icon-border.facebook(href='#')
+              li
+                a.icon.icon-border.twitter(href='#')
+              li
+                a.icon.icon-border.instagram(href='#')
+      .col-md-3.about-grid
+        figure
+          img.img-responsive(src='images/4.jpg', alt=' ')
+          figcaption
+            h4 Paul Bill
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+            ul.social-icons
+              li
+                a.icon.icon-border.facebook(href='#')
+              li
+                a.icon.icon-border.twitter(href='#')
+              li
+                a.icon.icon-border.instagram(href='#')
+      .clearfix
+    .about-grids-bottom
+      .col-md-4.about-grids-bottom-grid
+        h4 About Us
+        p
+          | Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+      .col-md-4.about-grids-bottom-grid
+        h4 Who We Are
+        p
+          | Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+      .col-md-4.about-grids-bottom-grid
+        h4 What We Do This
+        p
+          | Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+      .clearfix
+.about-bottom
+  .container
+    .about-bottom-grid
+      span
+    h3
+      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    p
+      i Andrew Jackson
+.testimonials
+  .container
+    h3
+      span Testimonials
+    p.autem maiores alias consequatur aut perferendis doloribus asperiores repellat
+    .testimonials-grids
+      .col-md-6.testimonials-grid-left
+        .wmuSlider.example1.animated.wow.slideInUp(data-wow-delay='.5s')
+          .wmuSliderWrapper
+            article(style='position: absolute; width: 100%; opacity: 0;')
+              .banner-wrap
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/1.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+                    p 2 days ago
+                  .clearfix
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/2.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
+                    p 3 days ago
+                  .clearfix
+            article(style='position: absolute; width: 100%; opacity: 0;')
+              .banner-wrap
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/3.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+                    p 3 days ago
+                  .clearfix
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/1.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
+                    p 4 days ago
+                  .clearfix
+            article(style='position: absolute; width: 100%; opacity: 0;')
+              .banner-wrap
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/2.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+                    p 4 days ago
+                  .clearfix
+                .testimonials-grid-left-grid
+                  .testimonials-grid-left1
+                    img.img-responsive(src='images/3.png', alt=' ')
+                  .testimonials-grid-left2
+                    h4
+                      | quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
+                    p 5 days ago
+                  .clearfix
+        script(src='js/jquery.wmuSlider.js')
+        script.
+          $('.example1').wmuSlider();
+      .col-md-6.testimonials-grid-right
+        h4 Our Skills
+        p Alias consequatur aut perferendis doloribus asperiores repellat.
+        h5 Selling
+        .progress-bar1.blue.stripes
+          span(style='width: 100%')
+        h5 Buying
+        .progress-bar1.orange.shine
+          span(style='width: 100%')
+        h5 Dealers
+        #soundlevel.progress-bar1.green.glow
+          span(style='width: 100%')
+        script.
+          $(document).ready(function(){
+          $('.quarter').click(function(){
+          $(this).parent().prev().children('span').css('width','50%');
+          });
+          $('.half').click(function(){
+          $(this).parent().prev().children('span').css('width','55%');
+          });
+          $('.three-quarters').click(function(){
+          $(this).parent().prev().children('span').css('width','75%');
+          });
+          $('.full').click(function(){
+          $(this).parent().prev().children('span').css('width','100%');
+          });
+          });
+          var intervalID = setInterval(function(){getData();}, 100);
+          var volumeLevel = 40;
+          function getData(){
+          if (volumeLevel==40)
+          {
+          volumeLevel=60
+          }else if (volumeLevel==60)
+          {
+          volumeLevel=40
+          }
+          $("#soundlevel").children('span').css('width', Math.floor(Math.random() * 100)+'%');
+          }
+          //@ sourceURL=pen.js
+      .clearfix
+.events
+  .container
+    h3
+      span News &amp; Events
+    p.autem maiores alias consequatur aut perferendis doloribus asperiores repellat
+    .events-grids
+      .col-md-4.events-grid
+        .events-grid1.hvr-sweep-to-top
+          a(href='single.html')
+            img.img-responsive(src='images/6.jpg', alt=' ')
+          h4
+            a(href='single.html') oribus asperiores
+          ul
+            li
+              a(href='#')
+                span.glyphicon.glyphicon-user(aria-hidden='true')
+                | Admin
+            li
+              span.glyphicon.glyphicon-calendar(aria-hidden='true')
+              | May 20, 2016
+          p
+            | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+      .col-md-4.events-grid
+        .events-grid1.hvr-sweep-to-top
+          a(href='single.html')
+            img.img-responsive(src='images/8.jpg', alt=' ')
+          h4
+            a(href='single.html') iusto odio dignissi
+          ul
+            li
+              a(href='#')
+                span.glyphicon.glyphicon-user(aria-hidden='true')
+                | Admin
+            li
+              span.glyphicon.glyphicon-calendar(aria-hidden='true')
+              | May 25, 2016
+          p
+            | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+      .col-md-4.events-grid
+        .events-grid1.hvr-sweep-to-top
+          a(href='single.html')
+            img.img-responsive(src='images/7.jpg', alt=' ')
+          h4
+            a(href='single.html') tatum deleniti atque
+          ul
+            li
+              a(href='#')
+                span.glyphicon.glyphicon-user(aria-hidden='true')
+                | Admin
+            li
+              span.glyphicon.glyphicon-calendar(aria-hidden='true')
+              | May 31, 2016
+          p
+            | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.
+      .clearfix

@@ -10,7 +10,7 @@ var concat = require('gulp-concat');
 var watch = require("gulp-watch");
 var pug = require('gulp-pug');
 
-gulp.task('default', ['images-to-dist', 'fonts-prepare', 'pug'], function() {
+gulp.task('default', ['images-to-dist', 'fonts-prepare', "bootstrap-prepare", 'less-prebuild', 'js-prepare'], function() {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -23,13 +23,18 @@ gulp.task('default', ['images-to-dist', 'fonts-prepare', 'pug'], function() {
       .pipe(gulp.dest('./dist'));
     reload();
   });
-  watch("./src/img/*.{png, svg, gif, jpg}", function() {
-    return gulp.src("./src/img/*.{png, svg, gif, jpg}")
+  watch("./src/img/*", function() {
+    console.log("image changed");
+    return gulp.src("./src/img/*")
       .pipe(gulp.dest("./dist/img"));
   });
 
   //reload if dist file is changed
-  gulp.watch("./dist/css/style.css").on("change", reload);
+  gulp.watch("./dist/css/main.css").on("change", reload);
+  gulp.watch('./dist/*.html').on("change", function() {
+    console.log('html changed');
+    reload();
+  });
 
   //watch for less files
   watch("./src/less/*.less", function() {
@@ -39,29 +44,38 @@ gulp.task('default', ['images-to-dist', 'fonts-prepare', 'pug'], function() {
       .pipe(less())
       .pipe(sourcemaps.write())
       .pipe(mincss())
-      .pipe(concat("style.css"))
-      .pipe(gulp.dest("./dist/css"));
+      // .pipe(concat("style.css"))
+      .pipe(gulp.dest("./dist/css/"))
+      // .pipe(reload());
   });
 
   watch('./src/pug/**/*.pug', function() {
-    console.log('pug files compiled to html');
+    console.log('pug changed');
     return gulp.src('./src/pug/**/*.pug')
       .pipe(pug())
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./dist/'))
+      .pipe(reload({
+        stream: true
+      }));
+  });
+
+  //watch images change
+  watch('./src/img/**/*.{svg, jpg, png, gif}', function() {
+    console.log('image changed');
+    gulp.src('./src/img/**/*')
+      .pipe(gulp.dest('./dist/img/'));
   })
 });
 
-gulp.task('pug', function() {
-  console.log('pug files compiled to html');
-  return gulp.src('./src/pug/**/*.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('./dist'));
-});
+gulp.task('js-prepare', function() {
+  gulp.src('./src/js/**/*')
+    .pipe(gulp.dest('./dist/js/'));
+})
 
 //all images from sources to production
 gulp.task("images-to-dist", function() {
-  gulp.src("./src/img/**/*.{png, gif,svg, jpg}")
-    .pipe(gulp.dest("./dist/img"));
+  gulp.src("./src/img/**/*")
+    .pipe(gulp.dest("./dist/img/"));
 });
 
 //prepare less files for development enviroment
@@ -78,13 +92,28 @@ gulp.task('less-prebuild', function() {
 })
 
 gulp.task("fonts-prepare", function() {
-  gulp.src("./bower_components/bootstrap/less/glyphicons.less")
-    .pipe(gulp.dest("./src/less"));
-  gulp.src("./bower_components/bootstrap/less/variables.less")
-    .pipe(gulp.dest("./src/less"));
-  gulp.src("./bower_components/bootstrap/fonts/*.{eot, svg, ttf, woff, woff2")
-    .pipe(gulp.dest("./dist/font/"))
-})
+  gulp.src("./node_modules/bootstrap/fonts/**/*")
+    .pipe(gulp.dest("./dist/fonts/"));
+  gulp.src("./fonts/**/*.{eot, svg, ttf, woff, woff2}")
+    .pipe(gulp.dest("./dist/fonts/"));
+  gulp.src('./node_modules/font-awesome/fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts/'));
+  gulp.src('./node_modules/font-awesome/css/font-awesome.min.css')
+    .pipe(gulp.dest('./dist/css/'));
+});
+
+gulp.task("normalize", function() {
+  gulp.src("./src/css/normalize.css")
+    .pipe(gulp.dest("./dist/css"));
+});
+gulp.task("bootstrap-prepare", function() {
+  gulp.src("./node_modules/bootstrap/dist/css/bootstrap.min.css")
+    .pipe(gulp.dest("./dist/css"));
+  gulp.src("./node_modules/bootstrap/dist/js/bootstrap.min.js")
+    .pipe(gulp.dest("./dist/js"));
+  gulp.src("./node_modules/jquery/dist/jquery.min.js")
+    .pipe(gulp.dest("./dist/js"));
+});
 
 
 gulp.task('less', function() {
@@ -141,6 +170,6 @@ gulp.task('ext', function() {
 });
 
 gulp.task("css", function() {
-  gulp.src("./bower_components/bootstrap/dist/css/bootstrap.min.css")
+  gulp.src("./node_modules/bootstrap/dist/css/bootstrap.min.css")
     .pipe(gulp.dest('./dist/css/'));
 });

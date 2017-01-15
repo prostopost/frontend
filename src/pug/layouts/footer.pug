@@ -1,0 +1,95 @@
+.footer
+  .container
+    h2 Sign up for our newsletter
+    p.para
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
+    .footer-contact
+      form(action='#', method='post')
+        input(type='text', name='Email', placeholder='Enter your email to update', required=' ')
+        |  
+        input(type='submit', value='Subscribe')
+    .footer-grids
+      .col-md-4.footer-grid
+        p
+          span.glyphicon.glyphicon-map-marker(aria-hidden='true')
+          |  General Pvt 66, Dong Da Hanoi, Vietnam.
+        p
+          a(href='mailto:contact@example.com')
+            span.glyphicon.glyphicon-envelope(aria-hidden='true')
+            |  contact@example.com
+        p
+          span.glyphicon.glyphicon-earphone(aria-hidden='true')
+          | +0123 456 686
+      .col-md-2.footer-grid
+        ul
+          li
+            a(href='mail.html') Contact
+          li
+            a(href='index.html') Home
+          li
+            a(href='short-codes.html') Short Codes
+          li
+            a(href='gallery.html') Gallery
+      .col-md-3.footer-grid
+        .footer-grid1
+          .footer-grid1-left
+            a(href='single.html')
+              img.img-responsive(src='images/7.jpg', alt=' ')
+          .footer-grid1-right
+            a(href='single.html') eveniet ut molesti
+            .m1
+              a(href='single.html')
+                span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+          .clearfix
+        .footer-grid1
+          .footer-grid1-left
+            a(href='single.html')
+              img.img-responsive(src='images/6.jpg', alt=' ')
+          .footer-grid1-right
+            a(href='single.html') earum rerum tenet
+            .m1
+              a(href='single.html')
+                span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+          .clearfix
+        .footer-grid1
+          .footer-grid1-left
+            a(href='single.html')
+              img.img-responsive(src='images/8.jpg', alt=' ')
+          .footer-grid1-right
+            a(href='single.html') maiores alias cons
+            .m1
+              a(href='single.html')
+                span.glyphicon.glyphicon-play-circle(aria-hidden='true')
+          .clearfix
+      .col-md-3.footer-grid
+        .footer-grid-instagram
+          a(href='single.html')
+            img.img-responsive(src='images/9.jpg', alt=' ')
+        .footer-grid-instagram
+          a(href='single.html')
+            img.img-responsive(src='images/10.jpg', alt=' ')
+        .footer-grid-instagram
+          a(href='single.html')
+            img.img-responsive(src='images/6.jpg', alt=' ')
+        .footer-grid-instagram
+          a(href='single.html')
+            img.img-responsive(src='images/7.jpg', alt=' ')
+        .clearfix
+      .clearfix
+    .footer-copy
+      p
+        | &copy; 2016 daniiltserin. All rights reserved | Design by 
+        a(href='http://w3layouts.com') W3layouts
+  script(src='js/bootstrap.min.js')
+  script(type='text/javascript').
+    $(document).ready(function() {
+    /*
+    var defaults = {
+    containerID: 'toTop', // fading element id
+    containerHoverID: 'toTopHover', // fading element hover id
+    scrollSpeed: 1200,
+    easingType: 'linear'
+    };
+    */
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });

@@ -22,7 +22,7 @@ ul,label{
 	padding:0;
 }
 body a:hover{
-	text-decoration:none;
+	text-decoration:none;  
 }
 /*-- header --*/
 .header-top-left ul li a,input[type="submit"],.related-post-right h4 a,.categories ul li a,.reply a,.comments-grid-right h3 a,.admin a,.single-left2-sub ul li a,.single-left2 ul.com li a,.contact-grid1-left1 a,.more a,.services-top-breadcrumbs-right ul li a,.events-grid1 p,.footer-grid1-right a,.m1 a,.events-grid1 ul li a,.footer-copy p a,.events-grid1 h4 a,.footer-grid p a,.footer-grid ul li a{

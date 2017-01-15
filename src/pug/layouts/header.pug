@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title
+      block page-title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Plottage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    link(href='css/bootstrap.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/font-awesome.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/style.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/main.css', rel='stylesheet', type='text/css', media='all')
+    script(type='text/javascript', src='js/jquery.min.js')
+    //- link(href='//fonts.googleapis.com/css?family=Quicksand:400,300,700', rel='stylesheet', type='text/css')
+    //- link(href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='js/move-top.js')
+    script(type='text/javascript', src='js/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+      });
+  body
+    .header
+      .header-top
+        .container
+          .header-top-left
+            ul
+              li
+                span.glyphicon.glyphicon-earphone(aria-hidden='true')
+                | +7 771 852 14 79
+              li
+                a(href='mailto:info@example.com')
+                  span.glyphicon.glyphicon-envelope(aria-hidden='true')
+                  | daniilborowkow@yandex.ru
+          .header-top-left1
+            ul.social-icons
+              li
+                a.fa.fa-vk(href='#')
+              li
+                a.fa.fa-facebook-official(href='#')
+              li
+                a.fa.fa-instagram(href='#')
+              li
+                a.fa.fa-pinterest(href='#')
+              li
+                a.fa.fa-odnoklassniki-square(href='#')
+          .header-top-right
+            .search
+              .search_form
+                form(action='#', method='post')
+                  input(type='text', name='Search', placeholder='Поиск...') 
+                  button(type='submit', value=' ')
+                    span.glyphicon.glyphicon-search
+          .clearfix
+      .header-bottom
+        .container
+          include navigation-menu.pug
